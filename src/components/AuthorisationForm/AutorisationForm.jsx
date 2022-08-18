@@ -3,9 +3,9 @@ import s from "./Autorisation.module.css";
 import { nanoid } from "nanoid";
 
 const initialStated = {
-  password: "",
   name: "",
   email: "",
+  password: "",
 };
 
 class AutorisationForm extends Component {
@@ -34,17 +34,20 @@ class AutorisationForm extends Component {
     const { handleChange, handleOnsubmit } = this;
 
     return (
-      <form onSubmit={handleOnsubmit}>
+      <form onSubmit={handleOnsubmit} className={s.form}>
         {options.map((item) => (
-          <label key={item[0]}>
-            {item[0]}
-            <input
-              type={item[0]}
-              name={item[0]}
-              onChange={handleChange}
-              value={item[1]}
-            />
-          </label>
+          <div className={s.formGroup} key={item[0]}>
+            <label key={item[0]}>
+              {item[0]}
+              <input
+                type={item[0]}
+                name={item[0]}
+                onChange={handleChange}
+                value={item[1]}
+                className={s.input}
+              />
+            </label>
+          </div>
         ))}
         {/* <label htmlFor="email"></label>
         <input id={email} type="email" />
@@ -54,7 +57,9 @@ class AutorisationForm extends Component {
         <label>
           <input type="password" />
         </label> */}
-        <button type="submit">Add</button>
+        <button type="submit" className={s.button}>
+          Add user
+        </button>
       </form>
     );
   }
