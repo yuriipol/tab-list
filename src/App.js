@@ -1,11 +1,24 @@
 import { Component } from "react";
-import TabList from "./components/TabList";
+import AutorisationForm from "./components/AuthorisationForm";
+import UserList from "./components/UsersList/UserList";
 
 class App extends Component {
+  state = {
+    users: [],
+  };
+  addUser = ({ user }) => {
+    this.setState((prevState) => {
+      return {
+        users: [...prevState.users, user],
+      };
+    });
+  };
   render() {
+    const { users } = this.state;
     return (
       <>
-        <TabList />
+        <AutorisationForm addUser={this.addUser} />
+        <UserList users={users} />
       </>
     );
   }
