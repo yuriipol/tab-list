@@ -7,9 +7,10 @@
   text-align: center;
   margin-bottom: 35px;
 
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.9);
 
-  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.5), 0px -5px 35px rgb(97, 163, 94);
+  text-shadow: 12px 8px 6px rgba(27, 219, 24, 0.7),
+    10px -5px 35px rgb(97, 163, 94);
 }
 
 .row {

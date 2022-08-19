@@ -2,6 +2,7 @@ import { Component } from "react";
 import s from "./Autorisation.module.css";
 import { nanoid } from "nanoid";
 import { AiFillAndroid } from "react-icons/ai";
+import { AiTwotoneEdit } from "react-icons/ai";
 
 const initialStated = {
   name: "",
@@ -59,7 +60,7 @@ class AutorisationForm extends Component {
           <input type="password" />
         </label> */}
         <button type="submit" className={s.button}>
-          <AiFillAndroid style={{ fontSize: 18 }} />
+          <AiTwotoneEdit style={{ fontSize: 18 }} />
           <span className={s.addButtonText}>ADD</span>
           <AiFillAndroid style={{ fontSize: 18 }} />
         </button>
