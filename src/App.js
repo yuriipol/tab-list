@@ -30,21 +30,25 @@ import ProductForm from "./components/ProductForm/ProductForm";
 // }
 
 // export default App;
-class App extends Component {
-  state = {
-    products: [],
-  };
+// class App extends Component {
+//   state = {
+//     products: [],
+//   };
 
-  onSubmit = (product) => {
-    this.setState((prevState) => {
-      return {
-        products: [...prevState.products, product],
-      };
-    });
-  };
-  render() {
-    return <ProductForm onSubmit={this.onSubmit} />;
-  }
+//   onSubmit = (product) => {
+//     this.setState((prevState) => {
+//       return {
+//         products: [...prevState.products, product],
+//       };
+//     });
+//   };
+//   render() {
+//     return <ProductForm onSubmit={this.onSubmit} />;
+//   }
+// }
+
+// export default App;
+import Player from "./components/Player/Player.jsx";
+export default function App() {
+  return <Player source="http://media.w3.org/2010/05/sintel/trailer.mp4" />;
 }
-
-export default App;
